@@ -48,6 +48,9 @@ while not is_game_over():
         continue
 
     if guess in full_list:
+        if guess in guesses:
+            print('You can not guess the same word twice!')
+            continue
         guessed += 1
         guesses.append(guess)
         if guessed == WORDS_TO_WIN:
